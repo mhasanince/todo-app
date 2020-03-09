@@ -20,6 +20,18 @@ export default class TodoList extends Component {
     }));
   };
 
+  done = (id) => {
+    const todos = this.state.todos.map((todo) => {
+      if (id === todo.id) {
+        return { ...todo, done: !todo.done };
+      }
+      return todo;
+    });
+    this.setState({
+      todos: todos,
+    });
+  };
+
   render() {
     return (
       <div className="TodoList">
@@ -29,6 +41,8 @@ export default class TodoList extends Component {
               key={todo.id}
               content={todo.content}
               remove={() => this.remove(todo.id)}
+              done={todo.done}
+              toggleDone={() => this.done(todo.id)}
             />
           );
         })}

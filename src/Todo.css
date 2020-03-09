@@ -19,3 +19,8 @@
 .Todo img:first-child {
   margin-right: 0.6rem;
 }
+
+.done {
+  text-decoration: line-through;
+  color: #d4d4d4;
+}

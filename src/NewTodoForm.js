@@ -6,6 +6,7 @@ export default class NewTodoForm extends Component {
   state = {
     id: uuidv4(),
     content: '',
+    done: false,
   };
 
   handleChange = (e) => {
