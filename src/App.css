@@ -1,7 +1,13 @@
+.container {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
 .App {
   color: #ffffff;
   width: 600px;
-  margin: 100px auto;
+  margin: 0 auto;
   background-color: #fd5b5e;
   border-radius: 10px;
   box-shadow: 0 0px 11.9px rgba(0, 0, 0, 0.066),
@@ -19,4 +25,11 @@
 .App-header h1,
 .App-header h4 {
   margin: 1rem 0;
+}
+
+.container footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
