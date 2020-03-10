@@ -8,16 +8,30 @@ export default class TodoList extends Component {
     todos: [],
   };
 
+  componentDidMount() {
+    let todos = JSON.parse(localStorage.getItem('todos'));
+    if (todos !== null) {
+      todos = this.state.todos.concat(todos);
+      this.setState({
+        todos: todos,
+      });
+    }
+  }
+
   add = (todo) => {
-    this.setState((st) => ({
-      todos: [...st.todos, todo],
-    }));
+    const todos = [...this.state.todos, todo];
+    localStorage.setItem('todos', JSON.stringify(todos));
+    this.setState({
+      todos: todos,
+    });
   };
 
   remove = (id) => {
-    this.setState((state) => ({
-      todos: this.state.todos.filter((todo) => id !== todo.id),
-    }));
+    const todos = this.state.todos.filter((todo) => id !== todo.id);
+    localStorage.setItem('todos', JSON.stringify(todos));
+    this.setState({
+      todos: todos,
+    });
   };
 
   done = (id) => {
@@ -27,12 +41,14 @@ export default class TodoList extends Component {
       }
       return todo;
     });
+    localStorage.setItem('todos', JSON.stringify(todos));
     this.setState({
       todos: todos,
     });
   };
 
   render() {
+    console.log(this.state.todos);
     return (
       <div className="TodoList">
         {this.state.todos.map((todo) => {

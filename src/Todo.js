@@ -9,8 +9,10 @@ export default class Todo extends Component {
     const remove = <img src={trash} alt="Remove" onClick={this.props.remove} />;
     const contentStyle = `Todo-content ${this.props.done ? 'done' : ''}`;
     return (
-      <div className="Todo" onClick={this.props.toggleDone}>
-        <span className={contentStyle}>{this.props.content}</span>
+      <div className="Todo">
+        <span className={contentStyle} onClick={this.props.toggleDone}>
+          {this.props.content}
+        </span>
         {!this.props.done && remove}
       </div>
     );
