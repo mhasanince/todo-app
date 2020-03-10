@@ -1,7 +1,7 @@
 .NewTodoForm {
-  width: 60%;
   margin: 2rem auto;
   padding-bottom: 2rem;
+  text-align: center;
 }
 
 .NewTodoForm-input {
@@ -11,9 +11,9 @@
 
 .NewTodoForm-button {
   background-color: transparent;
-  border-top: 3px solid salmon;
-  border-right: 3px solid salmon;
-  border-bottom: 3px solid salmon;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
   padding: 1rem;
   color: #ffffff;
   font-weight: bold;

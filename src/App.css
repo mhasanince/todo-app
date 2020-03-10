@@ -3,6 +3,10 @@
   width: 600px;
   margin: 100px auto;
   background-color: #fd5b5e;
+  border-radius: 10px;
+  box-shadow: 0 0px 11.9px rgba(0, 0, 0, 0.066),
+    0 0px 25.6px rgba(0, 0, 0, 0.095), 0 0px 42.6px rgba(0, 0, 0, 0.124),
+    0 0px 73px rgba(0, 0, 0, 0.19);
 }
 
 .App-header {
